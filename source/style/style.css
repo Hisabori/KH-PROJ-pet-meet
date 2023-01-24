@@ -75,3 +75,30 @@ kh-video{
     font-size: 48px;
     color: #ffffff;
 }
+
+.kh-floating{
+    position: absolute;
+    right: 50%;
+    top: 180px;
+    margin-right: -720px;
+    text-align: center;
+    width: 100px;
+    background-color: greenyellow;
+    border: solid grey;
+    border-radius: 8px;
+}
+
+.kh-floating div:nth-child(1){
+    border: 2px solid grey;
+    border-radius: 8px;
+}
+
+.kh-floating div:nth-child(2){
+    border: 2px solid grey;
+    border-radius: 8px;
+}
+
+.kh-floating div:nth-child(3){
+    border: 2px solid grey;
+    border-radius: 8px;
+}
