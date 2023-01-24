@@ -68,7 +68,7 @@ kh-video{
 .kh-text{
     top: 50%;
     width: 100%;
-    background-color: greenyellow;
+    background-color: gray;
 }
 
 .kh-text p{
@@ -106,3 +106,4 @@ kh-video{
     border-radius: 8px;
 }
  */
+
