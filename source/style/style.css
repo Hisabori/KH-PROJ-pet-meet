@@ -74,6 +74,7 @@ kh-video{
     top: 50%;
     width: 100%;
     background-color: white;
+    text-shadow: 27px 5px 4px #CDFF00;
 }
 
 .kh-text p{
@@ -81,6 +82,7 @@ kh-video{
     text-align: center;
     font-size: 48px;
     color: #ffffff;
+    text-shadow: 27px 5px 4px #CDFF00;
 }
 
 /*
@@ -111,3 +113,9 @@ kh-video{
     border-radius: 8px;
 }
  */
+
+.loading{
+    align: center;
+    width: 500px;
+    height: 500px;
+}
