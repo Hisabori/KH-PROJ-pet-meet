@@ -28,7 +28,7 @@ section{
 .kh-box1{
     filter(background): blur(5px);
     object-fit: cover;
-    background: url(../media/video/fomi.mp4);
+    background: url(../KH-MEDIA/video/fomi.mp4);
     scroll-behavior: smooth;
 }
 
@@ -37,7 +37,7 @@ section{
 .kh-box2{
     filter(background): blur(5px);
     object-fit: cover;
-    background-image: url(../media/image/dog-img1.jpg);
+    background-image: url(../KH-MEDIA/image/dog-img1.jpg);
     scroll-behavior: smooth;
 }
 
@@ -46,7 +46,7 @@ section{
 .kh-box3{
     filter(background): blur(5px);
     object-fit: cover;
-    background-image: url(../media/image/dog-img2.jpg);
+    background-image: url(../KH-MEDIA/image/dog-img2.jpg);
     scroll-behavior: smooth;
 }
 
@@ -56,6 +56,11 @@ video{
     height: 100%;
     object-fit: cover;
 }
+
+.kh-container:after{
+    content: "혼자 하는 산책,";
+}
+
 
 /* --------------------------------
 kh-video{
@@ -68,7 +73,7 @@ kh-video{
 .kh-text{
     top: 50%;
     width: 100%;
-    background-color: greenyellow;
+    background-color: white;
 }
 
 .kh-text p{
