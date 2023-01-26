@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
-    <title>지도에 컨트롤 올리기</title>
+    <title>pet meet 지도 api test</title>
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+
+    <!--bootstrap cdn-->
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
-<div id="map" style="width:100%;height:350px;"></div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../KH-FrontPage.html">pet meet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../KH-FrontPage.html">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">산책</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../board/board.html">게시판</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        더보기
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../member/KH-Login.html">회원가입/로그인</a></li>
+                        <li><a class="dropdown-item" href="#">마이페이지</a></li>
+                        <li><a class="dropdown-item" href="https://hisabori.notion.site/Q-A-1edb78eaa2934a8fbbe8c71616087704">고객센터</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<embed>
+<div id="map" style="width:350px;height:350px;"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6addc77876daf887b6419b3889757dbd"></script>
 <script>
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         mapOption = {
-            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            center: new kakao.maps.LatLng(37.5285738, 126.9322898), // 지도의 중심좌표
             level: 3 // 지도의 확대 레벨
         };
 
@@ -28,6 +76,29 @@
     // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
     var zoomControl = new kakao.maps.ZoomControl();
     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+    var iwContent = '<div style="padding:5px;">여기는 어떄요?</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition = new kakao.maps.LatLng(37.5285738, 126.9322898), //인포윈도우 표시 위치입니다
+        iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+
+    // 인포윈도우를 생성하고 지도에 표시합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        map: map, // 인포윈도우가 표시될 지도
+        position : iwPosition,
+        content : iwContent,
+        removable : iwRemoveable
+    });
 </script>
+</embed>
+<h1>pet meet test</h1>
+
+<h4 class="display-1">오늘의 추천 지역</h4>
+<li>
+    마포
+    <li>
+        한강으로 가볼까여?
+    </li>
+</li>
+
 </body>
 </html>

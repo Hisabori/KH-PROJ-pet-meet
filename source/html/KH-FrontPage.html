@@ -35,16 +35,19 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <div id="liveAlertPlaceholder"></div>
+                    <button type="button" class="btn btn-primary" id="liveAlertBtn">산책
+                    </button>
+                    <!--lass="nav-link" href="board-load.html">게시판</a>-->
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="frontpage-LOAD.html">홈</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../board/board.html">게시판</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../html/loc/test.html">지도 api test</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">산책</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="board-load.html">게시판</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,6 +65,55 @@
                 <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
+            <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+                    integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+            <script>
+                Kakao.init('6addc77876daf887b6419b3889757dbd'); // 사용하려는 앱의 JavaScript 키 입력
+            </script>
+
+            <a id="kakaotalk-sharing-btn" href="javascript:;">
+                <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+                     alt="카카오톡 공유 보내기 버튼" />
+            </a>
+
+            <script>
+                Kakao.Share.createDefaultButton({
+                    container: '#kakaotalk-sharing-btn',
+                    objectType: 'feed',
+                    content: {
+                        title: 'PET MEET.여기서.',
+                        description: 'PET.MEET 바로가기',
+                        imageUrl:
+                            'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                        link: {
+                            // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+                            mobileWebUrl: 'https://developers.kakao.com',
+                            webUrl: 'https://developers.kakao.com',
+                        },
+                    },
+                    social: {
+                        likeCount: 286,
+                        commentCount: 45,
+                        sharedCount: 845,
+                    },
+                    buttons: [
+                        {
+                            title: '웹으로 보기',
+                            link: {
+                                mobileWebUrl: 'https://shuwebpc.com/beta/KH-PROJ-1/source/html/frontpage-LOAD.html',
+                                webUrl: 'https://shuwebpc.com/beta/KH-PROJ-1/source/html/frontpage-LOAD.html',
+                            },
+                        },
+                        {
+                            title: '앱으로 보기',
+                            link: {
+                                mobileWebUrl: 'https://developers.kakao.com',
+                                webUrl: 'https://developers.kakao.com',
+                            },
+                        },
+                    ],
+                });
+            </script>
         </div>
     </div>
 </nav>
@@ -92,6 +144,9 @@
         </a>
     </div>
 </nav>
+
+
+
 <!--
 <div class="kh-floating">
     <div>마이페이지</div>
@@ -99,6 +154,6 @@
     <div>게시판</div>
 </div>
 -->
-
+<script type="text/javascript" src="../js/source.js"></script>
 </body>
 </html>
