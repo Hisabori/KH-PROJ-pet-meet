@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button" onclick="console.log('버튼이 클릭되었습니다')">클릭하세요</button>
+    <ul id="menu">
+
+        <li>불고기버거</li>
+    
+        <li>치즈버거</li>
+    
+        <li>치킨버거</li>
+    
+    </ul>
+    
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous">
+    $(document).ready(function() {
+        $("#menu").click(function(){
+    
+            $("#menu").css('background', 'gray');
+    
+        });
+    });
+    </script>
+
+
+
+<button id="btn">클릭 전</button>
+
+<script>
+
+    var button = document.getElementById('btn');
+
+    button.addEventListener('click', function(){
+
+        
+        button.addEventListener('click', function(event){
+
+        
+        button.innerText='클릭 후'
+        button.style.backgroundColor = 'red';
+        });
+    });
+
+</script>
+</body> 
+</html> 
