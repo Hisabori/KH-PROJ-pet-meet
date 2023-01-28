@@ -3,7 +3,7 @@
 
 <head>
     <!--kakaomap import-->
-    <script type="text/javascript">import "../../js/map/kakaomap/import/KmapImport.js"</script>
+    <script type="text/javascript">src= "../../js/map/kakaomap/import/KmapImport.js"</script>
 
     <!--kakaomap stylesheet-->
     <link type="text/css" rel="stylesheet" href="../../style/API/KmapApi.css">
@@ -21,6 +21,12 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6addc77876daf887b6419b3889757dbd
+"></script>
+
+
+    <script type="text/javascript" src="../../js/map/kakaomap/API/GeoLocation/KmapGeoLocation.js"></script>
 
 
 </head>
@@ -63,27 +69,9 @@
 <embed>
 <section class="layout">
     <div>
-        <div id="map" style="width:500px;height:400px;"></div>
-
-
-        <div class="map_wrap">
-            <script type="text/javascript">import "./source/js/map/kakaomap/API/Search/KmapSearch.js"</script>
-            <div id="map_search" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-
-            <div id="menu_wrap" class="bg_white">
-                <div class="option">
-                    <div>
-                        <form onsubmit="searchPlaces(); return false;">
-                            키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15">
-                            <button type="submit">검색하기</button>
-                        </form>
-                    </div>
-                </div>
-                <hr>
-                <ul id="placesList"></ul>
-                <div id="pagination"></div>
-            </div>
-        </div>
+        <div id="map_search" style="width:100%;height:350px;"></div>
+            <script type="text/javascript" src="../../js/map/kakaomap/API/Search/KmapSearch.js"></script>
+    </div>
 
 
         </embed>
@@ -111,7 +99,9 @@
         <p style="margin-top:-12px">
             <b>Chrome 브라우저는 https 환경에서만 geolocation을 지원합니다.</b> 참고해주세요.
         </p>
-        <div id="mapGeoLoc" style="width:100%;height:350px;"></div>
+        <div id="map" style="width:100%;height:350px;">
+            <script type="text/javascript" src="../../../source/js/map/kakaomap/API/GeoLocation/KmapGeoLocation.js"></script>
+        </div>
     </div>
 </section>
 <script>http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={22aa72f844bd155bb072c6d143536bc7}</script>
