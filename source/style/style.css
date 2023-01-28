@@ -120,6 +120,11 @@ kh-video{
     height: 500px;
 }
 
+
+.layout {
+    display: flex;
+    gap: 16px;
+}
 #1{
 
 }

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
+    <!--kakaomap import-->
+    <script type="text/javascript">import "../../js/map/kakaomap/import/KmapImport.js"</script>
+
+    <!--kakaomap stylesheet-->
+    <link type="text/css" rel="stylesheet" href="../../style/API/KmapApi.css">
+
     <meta charset="utf-8">
     <title>pet meet 지도 api test</title>
     <!--bootstrap-->
@@ -54,51 +60,62 @@
     </div>
 </nav>
 <embed>
-<div id="map" style="width:350px;height:350px;"></div>
+<section class="layout">
+    <div>
+        <div id="map" style="width:500px;height:400px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6addc77876daf887b6419b3889757dbd"></script>
-<script>
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-        mapOption = {
-            center: new kakao.maps.LatLng(37.5285738, 126.9322898), // 지도의 중심좌표
-            level: 3 // 지도의 확대 레벨
-        };
 
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        <div class="map_wrap">
+            <script type="text/javascript">import "/"</script>
+            <div id="map_search" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
 
-    // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
-    var mapTypeControl = new kakao.maps.MapTypeControl();
+            <div id="menu_wrap" class="bg_white">
+                <div class="option">
+                    <div>
+                        <form onsubmit="searchPlaces(); return false;">
+                            키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15">
+                            <button type="submit">검색하기</button>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
+            </div>
+        </div>
 
-    // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
-    // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
-    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
-    // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
-    var zoomControl = new kakao.maps.ZoomControl();
-    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        </embed>
+    </div>
+    <div>
+        <h1 class="display-5">오늘의 추천 지역</h1>
+        <li>
+            마포
+        <li>
+            한강으로 가볼까여?
+        </li>
 
-    var iwContent = '<div style="padding:5px;">여기는 어떄요?</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-        iwPosition = new kakao.maps.LatLng(37.5285738, 126.9322898), //인포윈도우 표시 위치입니다
-        iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+        </li>
+        <div style="height: 50px" class="alert alert-primary d-flex align-items-center" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:" style="height: 20px;">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <div>
+                날씨가 좋지 않으니 조심하세요.
+            </div>
+        </div>
+    </div>
+    <div>
+        <!--geoLocation-->
+        <p style="margin-top:-12px">
+            <b>Chrome 브라우저는 https 환경에서만 geolocation을 지원합니다.</b> 참고해주세요.
+        </p>
+        <div id="mapGeoLoc" style="width:100%;height:350px;"></div>
+    </div>
+</section>
+<script>http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={22aa72f844bd155bb072c6d143536bc7}</script>
 
-    // 인포윈도우를 생성하고 지도에 표시합니다
-    var infowindow = new kakao.maps.InfoWindow({
-        map: map, // 인포윈도우가 표시될 지도
-        position : iwPosition,
-        content : iwContent,
-        removable : iwRemoveable
-    });
-</script>
-</embed>
-<h1>pet meet test</h1>
 
-<h4 class="display-1">오늘의 추천 지역</h4>
-<li>
-    마포
-    <li>
-        한강으로 가볼까여?
-    </li>
-</li>
 
 </body>
 </html>
