@@ -1,5 +1,5 @@
 //KAKAOMAP-SEARCH.JS
-import "../API/Search/KmapSearch.js";
+import "../API/Search/main.js";
 
 //KAKAOMAP-GEOLOCATION.JS
 import "../API/GeoLocation/KmapGeoLocation.js";

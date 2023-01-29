@@ -1,0 +1,19 @@
+{
+    "data" : [
+        {
+            "name": "서울특별시청",
+            "desc": "<div style='padding:5px;'>서울특별시청</div>",
+            "positions": [37.56643975010728, 126.97794509945896]
+        },
+        {
+            "name": "회현역",
+            "desc": "<div style='padding:5px;'>회현역</div>",
+            "positions": [37.55881646416759, 126.97856258017946]
+        },
+        {
+            "name": "명동역",
+            "desc": "<div style='padding:5px;'>명동역</div>",
+            "positions": [37.56102615422037, 126.98619807166733]
+        }
+    ]
+}

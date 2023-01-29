@@ -34,3 +34,44 @@
 #pagination {margin:10px auto;text-align: center;}
 #pagination a {display:inline-block;margin-right:10px;}
 #pagination .on {font-weight: bold; cursor: default;color:#777;}
+
+.customoverlay {
+    position: relative;
+    bottom: 40px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
+    float: left;
+}
+.customoverlay:after {
+    content: "";
+    position: absolute;
+    margin-left: -12px;
+    left: 50%;
+    bottom: -12px;
+    width: 22px;
+    height: 12px;
+    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png);
+}
+.customoverlay a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    background: #000
+    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
+    no-repeat right 14px center;
+}
+.customoverlay .title {
+    display: block;
+    text-align: center;
+    background: #fff;
+    margin-right: 35px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
